@@ -1,0 +1,524 @@
+/* ==========================
+   BITEBOX MENU PAGE
+   PREMIUM ORANGE & BLACK
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #111;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar {
+    background: #151515;
+    padding: 12px 6%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #ff6b00;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo img {
+    width: 180px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #eee;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a i {
+    color: #ff6b00;
+    margin-right: 5px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #ff6b00;
+}
+
+#cart-count {
+    background: #ff6b00;
+    color: white;
+    padding: 2px 7px;
+    border-radius: 50%;
+    font-size: 11px;
+}
+
+/* HERO SECTION */
+
+.menu-hero {
+    min-height: 540px;
+    padding: 65px 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background:
+    radial-gradient(circle at 80% 50%, #542300 0%, #191919 38%, #111 75%);
+}
+
+.hero-content {
+    max-width: 570px;
+}
+
+.hero-tag {
+    display: inline-block;
+    color: #ff8a32;
+    background: #38200f;
+    border: 1px solid #ff6b00;
+    padding: 9px 18px;
+    border-radius: 30px;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.hero-content h1 {
+    font-size: 53px;
+    line-height: 1.2;
+    margin: 25px 0;
+    font-weight: 800;
+}
+
+.hero-content h1 span {
+    color: #ff6b00;
+}
+
+.hero-content p {
+    color: #bbb;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 28px;
+    background: #ff6b00;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: white;
+    color: #ff6b00;
+    transform: translateY(-4px);
+}
+
+.hero-image {
+    position: relative;
+    width: 430px;
+    height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 15px 25px #000);
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.hero-price {
+    position: absolute;
+    bottom: 15px;
+    right: -5px;
+    background: #ff6b00;
+    padding: 15px 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px #0008;
+}
+
+.hero-price span {
+    font-size: 11px;
+}
+
+.hero-price h3 {
+    font-size: 27px;
+}
+
+/* SECTION HEADINGS */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading span {
+    color: #ff6b00;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    margin: 12px 0;
+}
+
+.section-heading p {
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* CATEGORY SECTION */
+
+.category-section {
+    padding: 75px 8%;
+    background: #171717;
+}
+
+.category-items {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+
+.category-card {
+    background: #222;
+    border: 1px solid #333;
+    border-radius: 16px;
+    padding: 20px 10px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.category-card img {
+    width: 100%;
+    height: 95px;
+    object-fit: contain;
+    transition: 0.3s;
+}
+
+.category-card h3 {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+.category-card:hover {
+    border-color: #ff6b00;
+    background: #302015;
+    transform: translateY(-8px);
+}
+
+.category-card:hover img {
+    transform: scale(1.1);
+}
+
+/* OFFER BANNER */
+
+.offer-banner {
+    margin: 60px 8%;
+    padding: 35px 45px;
+    border-radius: 20px;
+    background: linear-gradient(110deg, #ff6b00, #b83700);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.offer-banner span {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.offer-banner h2 {
+    font-size: 29px;
+    margin: 12px 0;
+}
+
+.offer-banner p {
+    font-size: 14px;
+}
+
+.offer-icon i {
+    font-size: 100px;
+    color: #ffffff55;
+}
+
+/* FOOD MENU */
+
+.menu-section {
+    padding: 70px 8%;
+    background: #111;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+}
+
+/* FOOD CARD */
+
+.food-card {
+    background: #1d1d1d;
+    border: 1px solid #303030;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: 0.35s;
+}
+
+.food-card:hover {
+    transform: translateY(-9px);
+    border-color: #ff6b00;
+    box-shadow: 0 12px 30px #ff6b0020;
+}
+
+.food-image {
+    position: relative;
+    height: 205px;
+    background: #292929;
+    overflow: hidden;
+}
+
+.food-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 12px;
+    transition: 0.4s;
+}
+
+.food-card:hover .food-image img {
+    transform: scale(1.09);
+}
+
+.food-label {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    z-index: 2;
+    background: #ff6b00;
+    color: white;
+    padding: 6px 10px;
+    font-size: 9px;
+    font-weight: 700;
+    border-radius: 20px;
+}
+
+.food-details {
+    padding: 18px;
+}
+
+.food-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.food-title h3 {
+    font-size: 16px;
+}
+
+.rating {
+    color: #ffb400;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.food-details p {
+    color: #aaa;
+    font-size: 12px;
+    line-height: 1.7;
+    margin: 12px 0 18px;
+    min-height: 42px;
+}
+
+.food-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.food-bottom h4 {
+    color: #ff6b00;
+    font-size: 22px;
+}
+
+.food-bottom button {
+    background: #ff6b00;
+    color: white;
+    border: none;
+    padding: 10px 17px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.food-bottom button:hover {
+    background: white;
+    color: #ff6b00;
+}
+
+/* FOOTER */
+
+.footer {
+    background: #080808;
+    border-top: 2px solid #ff6b00;
+    padding: 45px 20px 20px;
+    text-align: center;
+}
+
+.footer h2 {
+    font-size: 32px;
+}
+
+.footer h2 span {
+    color: #ff6b00;
+}
+
+.footer p {
+    color: #aaa;
+    margin: 12px 0;
+    font-size: 14px;
+}
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons i {
+    font-size: 22px;
+    margin: 0 12px;
+    color: #ff6b00;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.social-icons i:hover {
+    color: white;
+    transform: scale(1.2);
+}
+
+.copyright {
+    border-top: 1px solid #333;
+    padding-top: 18px;
+    margin-top: 25px !important;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+    .menu-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .category-items {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .nav-links {
+        gap: 13px;
+    }
+}
+
+@media (max-width: 750px) {
+    .nav-container {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu-hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 380px;
+    }
+
+    .menu-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .offer-banner h2 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
+
+    .category-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .offer-banner {
+        margin: 35px 5%;
+        padding: 25px;
+    }
+
+    .offer-icon i {
+        font-size: 50px;
+    }
+}

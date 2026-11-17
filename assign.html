@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Profile</title>
+<script src="myscript.js"></script>
+
+<style>
+    body{
+        font-family: "Times New Roman", serif;
+        margin:0;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+        background:#fff;
+    }
+
+    .container{
+        width:500px;
+    }
+
+    h2{
+        text-align:center;
+        margin-bottom:20px;
+    }
+
+    table{
+        width:100%;
+    }
+
+    td{
+        padding:6px;
+        vertical-align:top;
+        font-size:16px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="number"],
+    textarea{
+        width:220px;
+        padding:5px;
+    }
+
+    textarea{
+        height:80px;
+        resize:none;
+    }
+
+    input[type="submit"]{
+        padding:5px 15px;
+    }
+
+    .note{
+        color:red;
+        font-size:14px;
+        font-weight:bold;
+    }
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h2>Create Profile</h2>
+
+<form>
+
+<table>
+
+<tr>
+    <td><b>First Name:</b></td>
+    <td>
+        <input type="text" placeholder="First Name" required>
+    </td>
+</tr>
+
+<tr>
+    <td><b>Last Name:</b></td>
+    <td>
+        <input type="text" placeholder="Last Name" required>
+    </td>
+</tr>
+
+<tr>
+    <td><b>Date of Birth:</b></td>
+    <td>
+        <input type="date" required>
+    </td>
+</tr>
+
+<tr>
+    <td><b>Enter Age:</b></td>
+    <td>
+        <input type="number" placeholder="Age" min="1" step="1" required>
+        
+    </td>
+</tr>
+
+<tr>
+    <td><b>Gender:</b></td>
+    <td>
+        <input type="radio" name="gender" value="Male" checked> Male
+        <input type="radio" name="gender" value="Female"> Female
+     
+    </td>
+</tr>
+
+<tr>
+    <td><b>Current Address:</b></td>
+    <td>
+        <textarea required></textarea>
+    </td>
+</tr>
+
+<tr>
+    <td><b>Permanent Address:</b></td>
+    <td>
+        <textarea required></textarea>
+    </td>
+</tr>
+
+<tr>
+    <td></td>
+    <td>
+        <input type="submit" value="Create">
+    </td>
+</tr>
+
+</table>
+
+</form>
+
+</div>
+
+</body>
+</html>

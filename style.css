@@ -1,0 +1,37 @@
+.userlogin{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.userlog{
+    background: rgb(230, 169, 169);
+    padding: 50px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 10px 20px gray;
+
+}
+.userlog h2{
+    margin-bottom: 20px;
+    color: rgb(21, 216, 241);
+}
+
+.userlog input{
+    width: 100%;
+    padding: 10px;
+}
+.userlog button{
+    width: 35%;
+    background: rgb(38, 240, 223);
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 10px;
+
+}
+.userlog button:hover{
+    background: rgb(3, 7, 61);
+    color: white;
+}

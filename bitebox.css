@@ -1,0 +1,310 @@
+```css
+/* ===== GLOBAL STYLING ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #111111;
+    color: white;
+}
+
+/* ===== NAVBAR ===== */
+
+nav {
+    width: 100%;
+    background: #151515;
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #ff6b00;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav img {
+    width: 180px;
+    height: 55px;
+    object-fit: contain;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+    transition: 0.3s;
+}
+
+nav ul li a i {
+    margin-right: 7px;
+    color: #ff6b00;
+}
+
+nav ul li a:hover {
+    color: #ff6b00;
+}
+
+/* ===== HERO SECTION ===== */
+
+.hero {
+    height: 600px;
+    background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url("images/food-banner.jpg");
+
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero-content h2 {
+    font-size: 55px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.hero-content .one {
+    font-size: 28px;
+    color: #ff6b00;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.button {
+    background: #ff6b00;
+    color: white;
+    border: none;
+    padding: 15px 45px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: white;
+    color: #ff6b00;
+    transform: scale(1.08);
+}
+
+/* ===== VIDEO SECTION ===== */
+
+.video-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 8%;
+    gap: 50px;
+    background: #1b1b1b;
+}
+
+.video-media {
+    flex: 1;
+}
+
+.video-media h2 {
+    font-size: 42px;
+    color: #ff6b00;
+    margin-bottom: 20px;
+}
+
+.video-media p {
+    font-size: 19px;
+    color: #cccccc;
+    line-height: 1.8;
+}
+
+.video-content {
+    flex: 1;
+}
+
+.video-content video {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 3px solid #ff6b00;
+    box-shadow: 0 5px 25px rgba(255,107,0,0.2);
+}
+
+/* ===== ABOUT SECTION ===== */
+
+.about {
+    padding: 80px 12%;
+    text-align: center;
+    background: #111111;
+}
+
+.about h2 {
+    font-size: 40px;
+    color: #ff6b00;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.about p {
+    font-size: 17px;
+    line-height: 2;
+    color: #cccccc;
+    white-space: pre-line;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+    background: #080808;
+    padding: 60px 8% 20px;
+    border-top: 2px solid #ff6b00;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.footer-box h2 {
+    font-size: 23px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.footer-box p {
+    color: #bbbbbb;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.footer-box a {
+    display: block;
+    text-decoration: none;
+    color: #bbbbbb;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+
+.footer-box a:hover {
+    color: #ff6b00;
+    padding-left: 5px;
+}
+
+.footer-box i {
+    font-size: 22px;
+    color: #ff6b00;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footer-box i:hover {
+    color: white;
+    transform: scale(1.2);
+}
+
+.copyright {
+    border-top: 1px solid #333;
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    color: #999;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 900px) {
+
+    nav ul {
+        gap: 15px;
+    }
+
+    nav ul li a {
+        font-size: 13px;
+    }
+
+    .hero-content h2 {
+        font-size: 40px;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    nav div {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        height: 450px;
+        padding: 0 7%;
+    }
+
+    .hero-content h2 {
+        font-size: 32px;
+    }
+
+    .video-section {
+        flex-direction: column;
+        padding: 50px 7%;
+    }
+
+    .video-media h2 {
+        font-size: 30px;
+    }
+
+    .video-content video {
+        height: 250px;
+    }
+
+    .about {
+        padding: 50px 7%;
+    }
+
+    .about h2 {
+        font-size: 28px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
